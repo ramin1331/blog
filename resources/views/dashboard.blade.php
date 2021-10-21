@@ -23,16 +23,16 @@
                                         <div class="btn-group">
                                             <form action="show-post" method="get">
                                                 <input type="hidden" name="post_id" value="{{$post->id}}">
-                                                <button type="submit" class="btn btn-sm btn-outline-secondary">View</button>
+                                                <button type="submit" class="btn btn-sm btn-outline-secondary">نمایش</button>
                                             </form>
                                             @if($post->user_id == auth()->id())
                                                 <form action="edit-post" method="get">
                                                     <input type="hidden" name="post_id" value="{{$post->id}}">
-                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">ویرایش</button>
                                                 </form>
                                             @endif
                                         </div>
-                                        <small class="text-muted">9 mins</small>
+
                                     </div>
                                 </div>
                             </div>

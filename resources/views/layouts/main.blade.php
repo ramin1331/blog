@@ -74,11 +74,11 @@
             </a>
             <div class="row">
             <a class="col" href="create-post">
-                <button class="btn btn-secondary" type="button" >Createpost
+                <button class="btn btn-secondary" type="button" >پست
                 </button>
             </a>
             <a class="col" href="logout">
-                <button class="btn btn-secondary" type="button" >Logout
+                <button class="btn btn-secondary" type="button" >خروج
                 </button>
             </a></div>
         </div>
