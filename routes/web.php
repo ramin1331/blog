@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard',[BlogController::class, 'index']);
 
+Route::get('/create-post' , function (){
+    return view('Create_Post');
+});
+
+Route::get('/edit-post' , [BlogController::class, 'editPost']);
+
+Route::patch('/update-post' , [BlogController::class, 'updatePost']);
+
+Route::post('/store-post', [BlogController::class, 'addPost']);
+
+Route::get('/show-post', [BlogController::class, 'showPost']);
+
+Route::get('logout', function(){
+   auth()->logout();
+   return redirect('login');
+});
+
+//Route::mediaLibrary();
 require __DIR__.'/auth.php';

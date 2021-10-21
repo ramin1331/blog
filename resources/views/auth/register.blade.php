@@ -49,7 +49,7 @@
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
-
+                <a href="login" class="underline text-sm text-gray-600 hover:text-gray-900 ml-3 me-3">Login</a>
                 <x-button class="ml-4">
                     {{ __('Register') }}
                 </x-button>
